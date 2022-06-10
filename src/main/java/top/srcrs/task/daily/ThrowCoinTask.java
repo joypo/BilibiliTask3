@@ -27,7 +27,8 @@ public class ThrowCoinTask implements Task {
     public void run() {
         try {
             /* 今天投币获得了多少经验 */
-            int reward = getReward();
+//            int reward = getReward();
+            int reward = 0;
             /* 还剩多少个硬币 */
             int num2 = USER_DATA.getMoney().intValue();
             /* 配置类中设置投币数 */

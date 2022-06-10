@@ -115,13 +115,12 @@ public class BiliStart {
     }
 
     public static boolean checkEnv() {
-
         String BILI_JCT = System.getenv("BILI_JCT");
         String SESSDATA = System.getenv("SESSDATA");
         String DEDEUSERID = System.getenv("DEDEUSERID");
         USER_DATA.setCookie(System.getenv("BILI_JCT"),
-                System.getenv("SESSDATA"),
-                System.getenv("DEDEUSERID"));
+            System.getenv("SESSDATA"),
+            System.getenv("DEDEUSERID"));
         return StringUtil.isAnyBlank(BILI_JCT, SESSDATA, DEDEUSERID);
     }
 

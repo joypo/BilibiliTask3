@@ -34,7 +34,7 @@ class SendTest {
     @Test
     void SendTgBotTest() {
         if(StringUtil.isNotBlank(System.getenv("TGBOT"))){
-            SendTgBot.send(System.getenv("TGBOT"));
+//            SendTgBot.send(System.getenv("TGBOT"));
         }
     }
 

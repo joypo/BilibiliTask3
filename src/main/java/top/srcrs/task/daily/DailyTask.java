@@ -25,11 +25,13 @@ public class DailyTask implements Task {
     @Override
     public void run() {
         try {
-            JSONObject reward = getReward();
+//            JSONObject reward = getReward();
             /* 今天是否完成分享视频任务 */
-            boolean isShare = reward.getBoolean("share_av");
+//            boolean isShare = reward.getBoolean("share_av");
+            boolean isShare = false;
             /* 今天是否完成观看视频任务 */
-            boolean isWatch = reward.getBoolean("watch_av");
+//            boolean isWatch = reward.getBoolean("watch_av");
+            boolean isWatch = false;
             /* 如果模拟观看视频和分享视频还未做完。
                这里做了一个小小的优化，如果这两个任务都完成，就不必再发送请求获取视频了。
             */
@@ -132,7 +134,9 @@ public class DailyTask implements Task {
      * @Time 2020-10-13
      */
     public JSONObject getReward() {
-        return Request.get("https://account.bilibili.com/home/reward").getJSONObject("data");
+//        https://api.bilibili.com/x/member/web/exp/reward
+//        https://account.bilibili.com/home/reward
+        return Request.get("https://api.bilibili.com/x/member/web/exp/reward").getJSONObject("data");
     }
 
     /**
